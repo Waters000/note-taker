@@ -1,10 +1,12 @@
 const router = require('express').Router();
-// const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
-const { notes } = require("../../db/db.json");
+ const { createNewNote, deleteNote } = require('../../lib/notes');
+const notes = require("../../db/db.json");
+
+const uuid = require('../../helpers/uuid')
 
 
 router.get('/notes', (req, res) => {
- 
+  console.log('here are the notes', notes)
     res.json(notes);
   });
 
