@@ -26,7 +26,7 @@ router.delete("/notes/:id", (req, res) => {
 
   deleteNote(req.params.id, notes);
   notes = (newArray)
-  res.json(newArray).then(readFile)
+  res.json(newArray)
 });
   
   
